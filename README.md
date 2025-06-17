@@ -15,7 +15,7 @@ Submitted by: **Constantinos Papanicolaou**
 
 Estimated time spent: **20** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://flixster-starter-77gq.onrender.com/)
 
 ### Application Features
 
@@ -75,9 +75,9 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 #### STRETCH FEATURES
 
-- [ ] **Deployment**
-  - [ ] Website is deployed via Render.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough. 
+- [x] **Deployment**
+  - [x] Website is deployed via Render.
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough. 
 - [ ] **Embedded Movie Trailers**
   - [ ] Within the pop-up modal displaying a movie's details, the movie trailer is viewable.
     - [ ] When the trailer is clicked, users can play the movie trailer.

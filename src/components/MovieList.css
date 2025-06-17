@@ -1,6 +1,6 @@
 .movie-container {
     display: grid; /* grid layout for movie cards */
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 5px; /* space between movie cards */
     padding: 10px 80px;
     justify-content: center;

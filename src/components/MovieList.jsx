@@ -49,7 +49,7 @@ const MovieList = ({ searchQuery, filterValue, onMovieClick }) => {
     }
   };
 
-  // Client-side sorting function for when we can't use API sorting
+  // Client side sorting function for when we can't use API sorting
   const sortMoviesClientSide = (movies, sortBy) => {
     const sortedMovies = [...movies];
     
