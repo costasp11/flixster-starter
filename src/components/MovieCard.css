@@ -1,0 +1,183 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.movie-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 16px;
+    max-width: 280px;
+    min-width: 280px;
+    width: 280px;
+    height: 450px;
+    
+    /* Dark theme styling */
+    background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.3),
+        0 2px 8px rgba(0, 0, 0, 0.15);
+    
+    /* Subtle inner glow */
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.movie-box:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: linear-gradient(145deg, #2a2a2a, #3d3d3d);
+    border: 1px solid #555;
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.4),
+        0 8px 16px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.movie-box:hover::before {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.movie-details img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    border: 1px solid #404040;
+}
+
+.movie-box:hover .movie-details img {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.movie-details h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 15px 0 8px 0;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.3;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    height: 3.2em; /* Fixed height for 2 lines */
+}
+
+.movie-details p {
+    font-size: 0.95rem;
+    color: #ffd700;
+    font-weight: 600;
+    margin: 0;
+    padding: 8px 12px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+}
+
+.movie-details p::before {
+    content: '⭐';
+    font-size: 0.9rem;
+}
+
+/* Loading state */
+.movie-box.loading {
+    background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .movie-box {
+        max-width: 240px;
+        min-width: 240px;
+        width: 240px;
+        height: 400px;
+        margin: 15px;
+        padding: 15px;
+    }
+    
+    .movie-details img {
+        height: 260px;
+    }
+    
+    .movie-details h2 {
+        font-size: 1.1rem;
+        margin: 12px 0 6px 0;
+    }
+    
+    .movie-details p {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+}
+
+/* Dark theme color variations */
+.movie-box.featured {
+    background: linear-gradient(145deg, #1e3a8a, #3b82f6);
+    border: 1px solid #60a5fa;
+}
+
+.movie-box.featured:hover {
+    background: linear-gradient(145deg, #1e40af, #2563eb);
+    box-shadow: 
+        0 12px 40px rgba(59, 130, 246, 0.3),
+        0 8px 16px rgba(59, 130, 246, 0.1);
+}
+
+/* No poster fallback */
+.movie-details .no-poster {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #374151, #4b5563);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    text-align: center;
+    border: 1px solid #404040;
+}
+
+.movie-details .no-poster::before {
+    content: '🎬';
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+}

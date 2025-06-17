@@ -1,0 +1,23 @@
+.movie-container {
+    display: grid; /* grid layout for movie cards */
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 5px; /* space between movie cards */
+    padding: 10px 80px;
+    justify-content: center;
+    align-items: start;
+    background-color: rgb(29, 29, 29);
+}
+
+.load-more-button {
+    background-color: #0b8caf;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
