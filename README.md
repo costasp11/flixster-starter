@@ -111,7 +111,8 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-[![Watch the video](https://cdn.loom.com/sessions/thumbnails/79546301d01d4077a60516ec51ca19bd-00001.gif)](https://www.loom.com/share/79546301d01d4077a60516ec51ca19bd)
+https://www.loom.com/share/79546301d01d4077a60516ec51ca19bd
+
 
 ### Reflection
 
